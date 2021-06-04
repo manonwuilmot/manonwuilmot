@@ -1,0 +1,30 @@
+$font-size: 0.7rem 0.8rem 1rem 1.5rem 2rem 3rem 5rem; 
+$font-weight: 100, 200, 300, 500, 700;
+
+
+
+
+
+@mixin shadow($colourshadow){
+    box-shadow: 0 0 20px $colourshadow;
+}
+@mixin lightshadow{
+    box-shadow: 0 0 20px rgb(189, 189, 189)
+}
+@mixin padding-bloc{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+@mixin margin-left{
+    margin-left: 20px;
+}
+@mixin margin-right{
+    margin-right: 20px;
+}
+
+@mixin desktop-only {
+    @media screen and(min-width: map-get($breakpoints, desktop)){
+@content;
+    }
+        }
+

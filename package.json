@@ -1,0 +1,16 @@
+{
+  "name": "manonwuilmot_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts":{
+  "sass": "sass --watch ./sass/main.scss:./style.css"
+},
+  "keywords": "",
+  "author": "Manon Wuilmot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manonwuilmot/ManonWuilmot_portfolio/issues"
+  },
+  "homepage": "https://github.com/manonwuilmot/ManonWuilmot_portfolio#readme"
+}
