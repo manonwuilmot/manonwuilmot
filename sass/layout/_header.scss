@@ -50,6 +50,27 @@ figure{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 65%;
     text-align: center;
+}
+.email{
+    text-decoration: none;
+}
+.button-contact{
+    @extend .typo;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: linear-gradient(rgb(211, 85, 106), rgb(83, 18, 27));
+    border-radius: 40px;
+    padding: 10px 40px;
+    margin-top: 30px;
+    @include shadow(grey);
+    transition: transform 450ms ease-in-out;
+    transform: scale(1);
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.15);
+    }
+
 }
