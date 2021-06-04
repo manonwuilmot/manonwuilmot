@@ -1,5 +1,5 @@
 {
-  "name": "manonwuilmot_portfolio",
+  "name": "manonwuilmot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "author": "Manon Wuilmot",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manonwuilmot/ManonWuilmot_portfolio/issues"
+    "url": "https://github.com/manonwuilmot/manonwuilmot/issues"
   },
-  "homepage": "https://github.com/manonwuilmot/ManonWuilmot_portfolio#readme"
+  "homepage": "https://github.com/manonwuilmot/manonwuilmot#readme"
 }
