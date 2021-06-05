@@ -8,40 +8,23 @@ p{
     @extend .typo;
     font-size: 1rem;
 }
-.background{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left:0;
-    z-index: -1;  
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    &-img{
-        width: 100%;
-        height: auto;
-        
-    } 
-}
+
 
 .loader{
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    z-index: 3;
+    z-index: -1;
     width: 100%;
     height: 100%;
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     transform: translateX(0px);
-    animation: fondu 3s ease-in-out, bye 3s ease-in-out;
+    animation: fondu 3s ease-in-out;
     animation-delay: 450ms;
     animation-fill-mode: forwards;
-    &::before{
-        z-index: -2;
-    }
     &-logo{
         width: 300px;
         height: auto;
@@ -73,7 +56,14 @@ p{
       opacity: 0;
     }
 }
-
+@keyframes bye2{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
 @keyframes rotate{
     0%{
         transform: rotate(0);

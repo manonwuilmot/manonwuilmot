@@ -15,32 +15,42 @@ ul{
 
 .nav-main-menu{
     position: absolute;
-    background-color: rgb(255, 123, 0.5);
+    z-index: 2;
+    background: linear-gradient(#e66465, #9198e5);
     top: 0; bottom: 0; left: 0;
     width: 300px;
-    height: 100%;
-    margin-left: -150px;
+    height: 150%;
+    transform: translateX(-150px);
     opacity: 0;
-    transition: opacity 600ms ease-in-out, transform 600ms ease-in-out;
+    transition: opacity 450ms ease-in-out, transform 450ms ease-in-out;
     &:hover{
         opacity: 1;
-        cursor: pointer;
-        transform: translateX(150px);
+        transform: translateX(0px);
     }
 }
 
 .menu{
-    position: absolute;
-    top: 5%;
-    left: 5%;
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    top: 20px;
+    left: 50px;
     @extend .typo;
     font-size: 2rem;
     color: white;
+    background: linear-gradient(#e66465, #9198e5);
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
 
 .main-menu{
+    position: absolute;
+    z-index: 4;
     margin-left: 40px;
     margin-top: 100px;
     height: 400px;
