@@ -1,6 +1,16 @@
 ul{
     list-style: none;
     @extend .typo;
+    padding: 0;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    &:hover{
+        color: rgb(0, 0, 158);
+        cursor: pointer;
+        @include textshadow;
+    }
 }
 
 .nav-main-menu{
@@ -31,6 +41,7 @@ ul{
 
 
 .main-menu{
+    margin-left: 40px;
     margin-top: 100px;
     height: 400px;
     display: flex;
@@ -39,11 +50,6 @@ ul{
     font-weight: 500;
     font-size: 2rem;
     color: white;
-    & li:hover{
-        color: rgb(0, 0, 158);
-        cursor: pointer;
-        @include textshadow;
-
-    }
+    
 
 }
