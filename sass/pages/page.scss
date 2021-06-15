@@ -1,0 +1,132 @@
+h1{
+    @extend .typo;
+}
+.title-page{
+    font-size: nth($font-size, 5);
+    & span{
+    color: $colour-light-gray;
+}
+}
+.header-page{
+    width: 100%;
+    height: 150px;
+}
+.menu2{
+    position: absolute;
+    top: 5%;
+    left: 100px;
+    @extend .typo;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+.title-right{
+    position: absolute;
+    margin-right: 5%;
+    right: 0;
+    font-size: 1rem;
+    width: 50%;
+    height: 300px;
+    text-align: right;
+}
+.projets{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.projet{
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    background: linear-gradient(#64e69f, #ffffff);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-400px);
+    animation: come 2s ease-in-out;
+    animation-fill-mode: forwards;
+    
+    &-background{
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        align-items: center;
+    }
+    &-description{
+        @extend .typo;
+        height: 80px;
+        
+    }
+    &-photo{
+        width: 100%;
+        height: 250px;
+        transform: scale(1);
+        opacity: 1;
+        transition: transform 450ms ease-in-out, opacity 450ms ease-in-out;
+        &:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        opacity: 0.2; 
+        }
+        &-box{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: $color-nude;
+            &-text{
+                @extend .typo;
+                position: absolute; 
+                z-index: -1;
+                height: 250px;
+                opacity: 0;
+                transition: opacity 450ms ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 1;
+                    } 
+
+            }
+        }
+    }
+}
+
+@keyframes come{
+    0%{
+        transform: translateY(-400px);
+        opacity: 0;
+        
+    }
+   
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.projet:nth-child(1){
+    animation-delay: 450ms;
+    
+}
+.projet:nth-child(2){
+    animation-delay: 900ms;
+    
+}
+.projet:nth-child(3){
+    animation-delay: 300ms;
+    
+}
+.projet:nth-child(4){
+    animation-delay: 600ms;
+    
+}
