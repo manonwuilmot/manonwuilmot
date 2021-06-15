@@ -40,10 +40,6 @@ figure {
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
-.header-profile-logo:hover {
-  transform: rotate(380deg);
-  cursor: pointer;
-}
 .header-profile-logo-img {
   height: 100%;
   width: auto;

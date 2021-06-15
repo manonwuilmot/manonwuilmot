@@ -30,10 +30,6 @@ figure{
             animation: jump 5s ease-in-out;
         animation-delay: 3s;
         animation-fill-mode: forwards;
-            &:hover{
-                transform: rotate(380deg); 
-                cursor: pointer;
-            }
             &-img{
                 height:100%;
                 width: auto;
