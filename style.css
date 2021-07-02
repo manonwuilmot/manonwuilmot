@@ -355,6 +355,7 @@ p {
 }
 
 .title-page {
+  width: 100%;
   font-size: 2rem;
 }
 .title-page span {
@@ -377,9 +378,11 @@ p {
 .title-right {
   position: absolute;
   margin-right: 5%;
+  margin-top: 20px;
   right: 0;
+  z-index: 1;
   font-size: 1rem;
-  width: 50%;
+  width: 80%;
   height: 300px;
   text-align: right;
 }
@@ -418,6 +421,11 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  .projet-background {
+    width: 100%;
+  }
+}
 .projet-description {
   font-weight: 700;
   height: 70px;
@@ -430,6 +438,11 @@ p {
 .projet-photo {
   height: 120%;
   transition: transform 450ms ease-in-out, opacity 450ms ease-in-out;
+}
+@media screen and (max-width: 500px) {
+  .projet-photo {
+    height: 100%;
+  }
 }
 .projet-photo:hover {
   cursor: pointer;
@@ -448,6 +461,15 @@ p {
   align-items: center;
   overflow: hidden;
   background-color: #ffc6c6;
+}
+@media screen and (max-width: 500px) {
+  .projet-photo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 }
 .projet-photo-box-text {
   display: flex;
@@ -506,6 +528,11 @@ p {
   opacity: 1;
   transition: transform 450ms ease-in-out, opacity 450ms ease-in-out;
 }
+@media screen and (max-width: 500px) {
+  .projet-photo2 {
+    height: 100%;
+  }
+}
 .projet-photo2:hover {
   cursor: pointer;
   transform: scale(1.2);
@@ -523,6 +550,11 @@ p {
   align-items: center;
   overflow: hidden;
   background-color: #ffc6c6;
+}
+@media screen and (max-width: 500px) {
+  .projet-photo2-box2 {
+    height: 100%;
+  }
 }
 
 .bloc-paintings {
