@@ -23,7 +23,7 @@ $font-weight: 100, 200, 300, 500, 700;
 }
 
 @mixin mobile{
-    @media screen and(min-width: map-get($breakpoints, desktop)){
+    @media screen and(min-width: map-get($breakpoints, mobile)){
 @content;
     }
         }

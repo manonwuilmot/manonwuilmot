@@ -1,3 +1,4 @@
+
 h1{
     @extend .typo;
 }
@@ -36,12 +37,13 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 .projet{
     width: 350px;
     height: 350px;
     margin: 20px;
-    background: linear-gradient(#64e69f, #ffffff);
+    background: linear-gradient(#64e69f, white);
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -54,6 +56,8 @@ h1{
     
     &-background{
         height: 350px;
+        width: 350px;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -62,40 +66,53 @@ h1{
     }
     &-description{
         @extend .typo;
+        font-weight: 700;
         height: 80px;
+        text-align: center;
+        & span{
+            font-size: nth($font-size, 2);
+            color: black;
+        }
         
     }
     &-photo{
-        width: 100%;
-        height: 250px;
-        transform: scale(1);
-        opacity: 1;
+        height: 100%;
         transition: transform 450ms ease-in-out, opacity 450ms ease-in-out;
         &:hover{
         cursor: pointer;
         transform: scale(1.2);
         opacity: 0.2; 
+        & + .projet-photo-box-text{
+            opacity: 1;
+        }
         }
         &-box{
             width: 100%;
+            height: 250px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             overflow: hidden;
             background-color: $color-nude;
+           
             &-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: $color-nude;
+                color : black;
+                width: 350px;
                 @extend .typo;
+                font-size: nth($font-size, 2);
+                font-weight: bold;
                 position: absolute; 
-                z-index: -1;
-                height: 250px;
+                z-index: 1;
+                height: 0px;
                 opacity: 0;
                 transition: opacity 450ms ease-in-out;
-                &:hover{
-                    cursor: pointer;
-                    opacity: 1;
-                    } 
-
             }
         }
     }
@@ -129,4 +146,113 @@ h1{
 .projet:nth-child(4){
     animation-delay: 600ms;
     
+}
+
+.projet-photo2{
+    width: 100%;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 450ms ease-in-out, opacity 450ms ease-in-out;
+    &:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    opacity: 0.2;
+        & + .projet-photo-box-text{
+            opacity: 1;
+        }
+    
+    }
+    &-box2{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: $color-nude;
+}
+}
+.bloc-paintings{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bloc-painting{
+    
+    width: 80%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-presentation{
+        width: 70%;
+        height: 450px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-landscape{
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    &-img{
+        height: 100%;
+        z-index:1;
+        transition: transform 450ms ease-in-out;
+        @include mobile{
+            height: 100%;
+
+        }
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+
+        }
+    }
+    &-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        @extend .typo;
+        font-size: nth($font-size,1);
+        width: 100%;
+        
+        color: black;
+        & span{
+            color: black;
+            font-style: italic;
+            font-size: nth($font-size,3);
+        }
+    }
+}
+}
+.bloc-painting{
+    &-portrait{
+    margin-left: 20px;
+    height: 400px;
+    width: 100%;
+    }
+    &-insitu{
+    width: 35%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-img{
+    height: 120%;
+}
+}
 }

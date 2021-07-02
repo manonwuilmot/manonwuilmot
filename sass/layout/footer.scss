@@ -3,7 +3,7 @@
     bottom: 0; right:0; left:0; 
     width: 100%;
     height: 70px;
-    background-color: $color-nude;
+    background: linear-gradient(white, $color-nude);
     color: black;
     display: flex;
     flex-direction: row;
@@ -15,7 +15,7 @@
     bottom: 0; right:0; left:0; 
     width: 100%;
     height: 70px;
-    background-color: $color-nude;
+    background: linear-gradient(white, $color-nude);
     color: black;
     display: flex;
     flex-direction: row;
