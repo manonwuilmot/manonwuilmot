@@ -541,6 +541,15 @@ p {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media screen and (max-width: 500px) {
+  .bloc-painting {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .bloc-painting-presentation {
   width: 70%;
   height: 450px;
@@ -549,6 +558,11 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .bloc-painting-presentation {
+    width: 100%;
+  }
 }
 .bloc-painting-landscape {
   height: 400px;
@@ -562,11 +576,6 @@ p {
   height: 100%;
   z-index: 1;
   transition: transform 450ms ease-in-out;
-}
-@media screen and (min-width: max 600px) {
-  .bloc-painting-landscape-img {
-    height: 100%;
-  }
 }
 .bloc-painting-landscape-img:hover {
   cursor: pointer;
@@ -600,8 +609,18 @@ p {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  .bloc-painting-insitu {
+    display: none;
+  }
+}
 .bloc-painting-insitu-img {
   height: 120%;
+}
+@media screen and (max-width: 500px) {
+  .bloc-painting-insitu-img {
+    display: none;
+  }
 }
 
 .images {
